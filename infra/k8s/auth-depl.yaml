@@ -21,6 +21,13 @@ spec:
                 secretKeyRef:
                   name: jwt-secret
                   key: JWT_KEY
+          resources:
+            requests:
+              memory: '256Mi' # Wymaga tyle pamięci RAM od klastra
+              cpu: '0.1' # Wymaga tyle mocy obliczeniowej od klastra
+            limits:
+              memory: '512Mi' # Maksymalnie tyle pamięci RAM może użyć kontener
+              cpu: '0.5' # Maksymalna dostępna ilość mocy obliczeniowej
 ---
 apiVersion: v1
 kind: Service

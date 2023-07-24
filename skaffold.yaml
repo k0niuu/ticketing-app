@@ -10,6 +10,14 @@ build:
         manual:
           - dest: .
             src: 'src/**/*.ts'
+    - image: k0niuu/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - dest: .
+            src: '**/*.js'
   local:
     push: false
 manifests:
