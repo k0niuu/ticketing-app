@@ -24,3 +24,10 @@ spec:
                 name: client-srv
                 port:
                   number: 3000
+          - path: /mongodb/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: auth-mongo-srv
+                port:
+                  number: 27017
