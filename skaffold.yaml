@@ -18,6 +18,14 @@ build:
         manual:
           - dest: .
             src: '**/*.js'
+    - image: k0niuu/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - dest: .
+            src: 'src/**/*.ts'
   local:
     push: false
 manifests:
